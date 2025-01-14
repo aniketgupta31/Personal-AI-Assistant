@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+#Chat-Bot{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+/* Logo Styling */
+#logo {
+    width: 20vw;
+    max-width: 350px; /* Prevent overly large logo on wider screens */
+    transition: transform 0.3s ease-in-out;
+}
+
+#logo:hover {
+    transform: scale(1.1); /* Subtle zoom effect on hover */
+}
+
+/* Headings */
+h1 {
+    color: aliceblue;
+    font-family: "Protest Guerrilla", sans-serif;
+    text-align: center;
+}
+
+/* Highlighted Text */
+#name {
+    color: rgb(212, 43, 122);
+    font-size: 2.8rem;
+    text-shadow: 2px 2px 5px rgba(212, 43, 122, 0.7);
+}
+
+#va {
+    color: rgb(43, 206, 212);
+    font-size: 2.8rem;
+    text-shadow: 2px 2px 5px rgba(43, 206, 212, 0.7);
+}
+
+/* Voice Icon */
+#voice {
+    width: 100px;
+    display: none;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+/* Button Styling */
+#btn {
+    width: 30%;
+    max-width: 350px; /* To make the button responsive */
+    background: linear-gradient(to right, rgb(21, 145, 207), rgb(201, 41, 116));
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 20px;
+    border-radius: 20px;
+    color: white;
+    box-shadow: 2px 2px 10px rgb(21, 145, 207), 2px 2px 10px rgb(201, 41, 116);
+    border: none;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+#btn:hover {
+    box-shadow: 2px 2px 20px rgb(21, 145, 207), 2px 2px 20px rgb(201, 41, 116);
+    letter-spacing: 2px;
+    transform: translateY(-3px);
+}
+
+#btn:active {
+    transform: translateY(0);
+    box-shadow: 1px 1px 15px rgb(21, 145, 207), 1px 1px 15px rgb(201, 41, 116);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #name, #va {
+        font-size: 2rem;
+    }
+
+    #btn {
+        font-size: 16px;
+        padding: 8px;
+        gap: 5px;
+    }
+
+    #logo {
+        width: 25vw;
+    }
+}
+
+@media (max-width: 480px) {
+    #btn {
+        width: 80%;
+        font-size: 14px;
+    }
+}
